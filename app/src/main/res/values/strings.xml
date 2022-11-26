@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">02botones</string>
+    <string name="opcionFemenino">Femenino</string>
+    <string name="opcionMasculino">Masculino</string>
+</resources>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tit_nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:gravity="center_vertical"
+                android:text="NOMBRE:"
+                android:textColor="@color/black"
+                android:typeface="monospace" />
+
+            <EditText
+                android:id="@+id/nombre"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Escriba aquí el nombre"
+                android:imeOptions="actionGo"
+                android:inputType="text"
+                android:textAlignment="center" />
+            <!--  android:imeOptions="actionDone"          -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tit_edad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:gravity="center_vertical"
+                android:text="EDAD:"
+                android:textColor="@color/black"
+                android:typeface="monospace" />
+
+            <EditText
+                android:id="@+id/edad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Escriba aquí la edad"
+                android:imeOptions="actionGo"
+                android:inputType="number"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Sexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:gravity="center_vertical"
+                android:text="SEXO:"
+                android:textColor="@color/black"
+                android:typeface="monospace" />
+
+            <RadioGroup
+                android:id="@+id/radiogrupo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/opcionFemenino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/opcionFemenino"
+                    app:layout_constraintBottom_toBottomOf="@id/radiogrupo"
+                    app:layout_constraintEnd_toEndOf="@+id/radiogrupo"
+                    app:layout_constraintStart_toStartOf="@+id/radiogrupo"
+                    app:layout_constraintTop_toTopOf="@+id/radiogrupo" />
+
+                <RadioButton
+                    android:id="@+id/opcionMasculino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/opcionMasculino"
+                    app:layout_constraintBottom_toBottomOf="@id/radiogrupo"
+                    app:layout_constraintEnd_toEndOf="@+id/opcionFemenino"
+                    app:layout_constraintStart_toStartOf="@+id/radiogrupo"
+                    app:layout_constraintTop_toTopOf="@+id/radiogrupo" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tit_profesion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:gravity="center_vertical"
+                android:text="PROFESIÓN:"
+                android:textColor="@color/black"
+                android:typeface="monospace" />
+
+            <Spinner
+                android:id="@+id/lista_profesiones"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Abrir para ver opciones"
+                android:textAlignment="center"
+                android:entries="@array/arrayempleos"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.01"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tit_hobbies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:gravity="center_vertical"
+                    android:text="HOBBIES:"
+                    android:textColor="@color/black"
+                    android:typeface="monospace" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/opcion1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="H1"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+
+                <CheckBox
+                    android:id="@+id/opcion2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="H2"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+
+                <CheckBox
+                    android:id="@+id/opcion3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="H3"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/boton_enviar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/boton_enviar"
+                    android:layout_marginLeft="18dp"
+                    android:text="ENVIAR" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/boton_limpiar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:text="LIMPIAR" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/resultado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

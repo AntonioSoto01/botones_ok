@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arrayempleos">
+
+        <item>Desempleado</item>
+        <item>Estudiante</item>
+        <item>Sector Primario</item>
+        <item>Sector Secundario</item>
+        <item>Sector Terciario</item>
+    </string-array>
+</resources>
